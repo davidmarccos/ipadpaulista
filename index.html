@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS DO GOOGLE FONTES USADAS PARA O SITE -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Playfair+Display+SC&display=swap"
+        rel="stylesheet">
+    <!-- font-family: 'Playfair Display', serif; font-family: 'Playfair Display SC', serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <!-- font-family: 'Libre Caslon Display', serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- font-family: 'El Messiri', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <!-- font-family: 'Lora', serif; -->
+
+    <!-- Icons -->
+    <link href="assets/css/icofont/icofont.min.css" rel="stylesheet">
+
+    <title>Home | IPAD Paulista</title>
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/estilo.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <!-- velocidade do scroll -->
+    <script src="assets/js/jQuery.min.js"></script>
+    <script src="assets/js/jQuery.scrollSpeed.js"></script>
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .w-100 {
+            height: -webkit-fill-available;
+        }
+
+        .imagem {
+            background-attachment: fixed;
+            background-image: url("assets/img/home/home.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .imagem .heading {
+            color: white;
+            font-size: 6em;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 250px;
+        }
+
+        .imagem p {
+            text-align: center;
+            padding: 40px 60px;
+        }
+
+        .imagem h6 {
+            text-align: center;
+            color: white;
+        }
+
+        .imagem p .btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            font-size: 1em;
+        }
+
+        .imagem p .btn:hover {
+            color: rgb(166, 165, 190);
+            border-color: rgb(166, 165, 190);
+        }
+
+        .about,
+        .eventos {
+            padding: 24px;
+            max-width: 800px;
+            margin: 60px auto;
+            -webkit-transition: 0.2s ease-out;
+            transition: 0.2s ease-out;
+        }
+
+        .about h2 {
+            padding-top: 60px;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .about p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .imagem .heading {
+                color: white;
+                font-size: 3em;
+                font-weight: bold;
+                text-align: center;
+                padding-top: 250px;
+            }
+
+            .imagem h6 {
+                font-size: 12px;
+                text-align: center;
+                color: white;
+            }
+
+            .about h2 {
+                padding-top: 0px;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .about p {
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 815px) {
+            .imagem .heading {
+                color: white;
+                font-size: 3em;
+                font-weight: bold;
+                text-align: center;
+                padding-top: 250px;
+            }
+
+            .imagem h6 {
+                font-size: 12px;
+                text-align: center;
+                color: white;
+            }
+
+            .about h2 {
+                padding-top: 0px;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .about p {
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+    </style>
+    
+    <style>
+        .navbar {
+            height: 80px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            -webkit-transition: background-color 1s ease 0s;
+            transition: background-color 1s ease 0s;
+        }
+
+        .navbar-default .navbar-brand {
+            margin-top: 10px;
+            color: white;
+        }
+
+        .navbar-default .navbar-brand:hover {
+            color: white;
+        }
+
+        .navbar-brand .img-logo {
+            background-image: url("assets/img/logos/logo-ipad-white.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-default .navbar-nav>li>a {
+            color: white;
+            margin: 10px 5px 5px 5px;
+        }
+
+        .navbar-default .navbar-nav>li>a:hover,
+        .navbar-default .navbar-nav>li>a:active,
+        .navbar-default .navbar-nav>li>a:focus {
+            color: rgb(202, 125, 66);
+            border: 1px solid rgb(211, 209, 209);
+        }
+
+        .navbar-default .navbar-nav>li>a:visited {
+            color:rgb(202, 125, 66);
+            text-decoration: none;
+        }
+
+        .navbar-default .navbar-nav>.active>a,
+        .navbar-default .navbar-nav>.active>a:hover,
+        .navbar-default .navbar-nav>.active>a:focus {
+            color: rgb(202, 125, 66);
+            border: 1px solid rgb(211, 209, 209);
+        }
+
+
+        .navbar.solid .navbar-default .navbar-toggler {
+            border-color: white;
+        }
+
+        .navbar-default .navbar-toggler:hover,
+        .navbar-default .navbar-toggler:focus {
+            background-color: rgb(224, 58, 58);
+        }
+
+        .navbar-default .navbar-toggler .icon-bar {
+            color: rgb(202, 125, 66);
+            background-color: rgb(202, 125, 66);
+
+        }
+
+        .navbar-default .navbar-collapse.collapse.in ul {
+            background-color: white;
+        }
+
+        .navbar.solid {
+            background-color: white;
+            -webkit-transition: background-color 1s ease 0s;
+            transition: background-color 1s ease 0s;
+        }
+        
+        .navbar-dark .navbar-toggler {
+            background-color: transparent;
+            border: 0.1px solid rgb(202, 125, 66);;
+        }
+
+        .navbar.solid .navbar-brand {
+            color: black;
+            -webkit-transition: color 1s ease 0s;
+            transition: color 1s ease 0s;
+        }
+
+        .navbar.solid .navbar-brand .img-logo {
+            background-image: url("assets/img/logos/logo-ipad-com-descricao3.png");
+            box-shadow: none;
+        }
+
+        .navbar.solid .navbar-nav>li>a {
+            color: black;
+        }
+
+        .navbar.solid .navbar-nav>li>a:hover,
+        .navbar.solid .navbar-nav>li>a:focus {
+            color: rgb(202, 125, 66);
+            -webkit-transition: color 1s ease 0s;
+            transition: color 1s ease 0s;
+        }
+
+        .navbar-brand #image {
+            padding: 2px;
+            background-image: url("assets/img/logos/logo-ipad-white.png");
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: center;
+            max-width: 300px;
+            margin-top: -5px;
+            height: 60px;
+            width: 250px;
+        }
+
+        .navbar.solid .navbar-brand #image {
+            padding: 2px;
+            background-image: url("assets/img/logos/logo-ipad-com-descricao3.png");
+            background-repeat: no-repeat;
+            background-size: 70%;
+            margin-top: -5px;
+            background-position: center;
+            max-width: 300px;
+            height: 60px;
+            width: 250px;
+        }
+
+        @media (max-width: 995px) {
+            .navbar-brand #image {
+                padding: 2px;
+                background-image: url("assets/img/logos/logo-ipad-white.png");
+                background-repeat: no-repeat;
+                background-size: 60%;
+                background-position: center;
+                max-width: 300px;
+                margin-top: -5px;
+                height: 70px;
+                width: 200px;
+                margin-left: -30px;
+            }
+
+            .navbar.solid .navbar-brand #image {
+                padding: 2px;
+                background-image: url("assets/img/logos/logo-ipad-com-descricao3.png");
+                background-repeat: no-repeat;
+                background-size: 60%;
+                margin-top: -5px;
+                background-position: center;
+                max-width: 300px;
+                height: 70px;
+                width: 200px;
+                margin-left: -30px;
+            }
+        }
+
+        .navbar-nav>li>.dropdown-menu {
+            z-index: 9999;
+        }
+    </style>
+
+    <style>
+        .about,
+        .eventos {
+            padding: 24px;
+            max-width: 800px;
+            margin: 60px auto;
+            -webkit-transition: 0.2s ease-out;
+            transition: 0.2s ease-out;
+        }
+
+        .about h2 {
+            padding-top: 60px;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .about p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+
+        @media (max-width: 600px) {
+            .imagem .heading {
+                color: white;
+                font-size: 3em;
+                font-weight: bold;
+                text-align: center;
+                padding-top: 180px;
+            }
+
+            .about h2 {
+                padding-top: 0px;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .about p {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            w-100 {
+                height: initial;
+            }
+        }
+
+        @media (max-width: 815px) {
+            .imagem .heading {
+                color: white;
+                font-size: 3em;
+                font-weight: bold;
+                text-align: center;
+                padding-top: 250px;
+            }
+
+            .imagem p {
+                font-size: 3em;
+                font-weight: bold;
+                font-family: 'El Messiri', sans-serif;
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+
+            .about h2 {
+                padding-top: 0px;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .about p {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            w-100 {
+                height: initial;
+            }
+        }
+        
+        .dropdown-item{
+            font-weight: bold;
+        }
+        .dropdown-menu{
+            border: none;
+            border-radius: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="transition: background-color 2s ease 0s; color: rgb(231, 230, 230)">
+        <div class="d-flex w-100 justify-content-between">
+            <!-- LOCO DA IGREJA -->
+            <a class="navbar-brand mx-0" href="index.html" style="width: 250px; height: 90px; ">
+                <div id="image"></div>
+            </a>
+            <!-- PARA O NAVBAR HAMBURGUER -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar9">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar9">
+             <ul class="navbar-nav mr-auto" style=" font-weight: bold;white-space: nowrap;">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quemsomos.html">QUEM SOMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locais.html">LOCAIS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ofertar.html">CONTRIBUIR</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex w-100">
+            &nbsp;
+        </div>
+    </nav>
+
+    <div class="imagem">
+        <h1 class="heading">SEJA BEM-VINDO</h1>
+        <h6>Igreja Pentecostal Assembleia de Deus - Paulista-PE</h6>
+        <p><button class="btn btn-large">Visite-nos</button></p>
+    </div>
+    <div class="about" id="about">
+        <h2>IPAD Paulista-PE</h2>
+        <p style="padding-top: 20px; padding-bottom: 40px;">Somos uma Igreja militante, avivada, que defende a Salvação
+            por meio da fé em Cristo Jesus, a atualidade dos Dons Espirituais, a esperança da Volta do Senhor Jesus,
+            tendo a Bíblia como a Infalível Palavra de Deus.
+            Existimos para adorar a Deus, proclamar o Evangelho de nosso Senhor Jesus Cristo, acolher e cuidar das
+            pessoas nos aspectos: Espiritual; Emocional; Físico e Social pela manifestação e atuação do Espírito Santo.
+        </p>
+    </div>
+
+    <style>
+        .container {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn-eventos {
+            margin: 20px auto;
+            border: none;
+            padding: 10px 60px;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .btn-eventos::before {
+            transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            content: '';
+            width: 50%;
+            height: 100%;
+            background: rgb(170, 125, 125);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .btn-eventos .btn-text {
+            color: white;
+            mix-blend-mode: difference;
+        }
+
+        .btn-eventos:hover::before {
+            background: rgb(170, 125, 125);
+            width: 100%;
+        }
+
+        .btn-eventos.rounded {
+            border-radius: 50px;
+        }
+
+        .btn-eventos.rounded .text-green {
+            color: #294e45;
+            mix-blend-mode: difference;
+        }
+
+        .btn-eventos.rounded::before {
+            border-radius: 50px;
+            width: 25%;
+            background: #294e45;
+        }
+
+        .btn-eventos.rounded:hover::before {
+            background: #294e45;
+            width: 100%;
+        }
+    </style>
+    <section id="eventos">
+        <div style="background:rgb(12, 12, 12); padding-bottom: 70px;">
+            <div style="margin: 3em;">
+                <h1
+                    style=" color: rgb(192, 133, 133); font-family: Helvetica, sans-serif; font-size: 4rem; padding-top: 90px; padding-bottom: 40px;">
+                    Estamos nos reunindo on-line e <br>presencial</h4>
+                    <h4
+                        style=" color: rgb(129, 89, 89); font-family: monospace; font-size: 2rem; font-weight: lighter;">
+                        Junte-se a nós em nossos cultos!</h4>
+                    <h2 style=" color: white; font-family: Helvetica, sans-serif; font-weight: 400; font-size: 3rem; ">
+                        Inscreva-se para participar dos cultos presenciais de domingo</h2>
+            </div>
+            <div class="container">
+                <button class="btn-eventos">
+                    <span class="btn-text">Inscreva-se</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        #mensagem-tipo2 .mensagem-tipo2 {
+            background-attachment: fixed;
+            height: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #mensagem-tipo2 .mensagem-tipo2 .heading1 {
+            font-family: 'El Messiri', sans-serif;
+            color: white;
+            font-size: 6em;
+            text-align: center;
+            padding-top: 100px;
+
+        }
+
+        #mensagem-tipo2 .mensagem-tipo2 p {
+            text-align: center;
+            padding: 10px 0 80px 0;
+            margin: 0px;
+        }
+
+        #mensagem-tipo2 .mensagem-tipo2 h2 {
+            font-family: 'El Messiri', sans-serif;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: lighter;
+        }
+        #mensagem-tipo2 .btn-menu,
+        #mensagem-tipo2 .btn-book {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: 0.5s;
+            line-height: 1;
+            margin: 0 10px;
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+            color: #fff;
+            border: 2px solid #ffb03b;
+            text-decoration: none;
+        }
+
+        #mensagem-tipo2 .btn-menu:hover,
+        #mensagem-tipo2 .btn-book:hover {
+            background: #ffb03b;
+            color: #fff;
+        }
+    </style>
+    <section id="mensagem-tipo2">
+        <div class="mensagem-tipo2" style="background-image: url('assets/img/home/IMG_0424.JPG');">
+            <h1 class="heading1">A igreja que ora</h1>
+            <h2>A nossa história</h2>
+            <p><a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">LEIA AQUI</a></p>
+        </div>
+    </section>
+
+    <style>
+        #equipe-min h1 {
+            font-family: 'El Messiri', sans-serif;
+            color: rgb(46, 45, 45);
+            font-size: 2em;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 40px;
+            margin: 0;
+        }
+    </style>
+    <section id="equipe-min">
+        <div style="background:rgb(252, 251, 251)">
+            <h1>Nossa Equipe</h1>
+            <div id="team" class="team" style="padding-bottom: 60px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-6 d-flex align-items-stretch" data-aos="zoom-in">
+                            <div class="member">
+                                <img src="assets/img/team/team (5).jpg" alt="">
+                                <h4>Vandecio José</h4>
+                                <span>Pastor Sênior</span>
+                                <p>
+                                    Sediado no Templo Sede, Vila Torres Galvão.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-6 d-flex align-items-stretch" data-aos="zoom-in">
+                            <div class="member">
+                                <img src="assets/img/team/team (6).jpg" alt="">
+                                <h4>Anderson de Oliveira</h4>
+                                <span>Presbítero</span>
+                                <p>
+                                    Dirigente do Templo Ouro Preto.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-6 d-flex align-items-stretch" data-aos="zoom-in">
+                            <div class="member">
+                                <img src="assets/img/team/team (8).jpg" alt="">
+                                <h4>Valmir Gomes</h4>
+                                <span>Evangelista</span>
+                                <p>
+                                    Dirigente do Templo Fragoso.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-6 d-flex align-items-stretch" data-aos="zoom-in">
+                            <div class="member">
+                                <img src="assets/img/team/team (4).jpg" alt="">
+                                <h4>Edson Vitorino</h4>
+                                <span>Presbítero</span>
+                                <p>
+                                    Dirigente do Templo Nobre.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= Sessão de dirigentes ======= -->
+
+    <style>
+        #mensagem-tipo1 {
+            background: rgb(211, 211, 211);
+        }
+
+        #mensagem-tipo1 .conteudo {
+            max-width: 800px;
+            margin: 0px auto 0px;
+            -webkit-transition: 0.2s ease-out;
+            transition: 0.2s ease-out;
+        }
+
+        #mensagem-tipo1 .btn-menu,
+        #mensagem-tipo1 .btn-book {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: 0.5s;
+            line-height: 1;
+            margin: 0 10px;
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+            color: black;
+            border: 2px solid black;
+            text-decoration: none;
+            margin-bottom: 80px;
+
+        }
+
+        #mensagem-tipo1 .btn-menu:hover,
+        #mensagem-tipo1 .btn-book:hover {
+            color: #fff;
+            border: 2px solid #ffb03b;
+
+        }
+
+        #mensagem-tipo1 .titulo {
+            font-family: 'El Messiri', sans-serif;
+            color: rgb(46, 45, 45);
+            font-size: 3em;
+            text-align: center;
+            padding: 80px 0 10px 0;
+            margin: 0;
+        }
+
+        #mensagem-tipo1 h2 {
+            margin: 0;
+            font-size: 1.2em;
+            text-align: center;
+            padding-bottom: 0;
+        }
+
+        #mensagem-tipo1 p {
+            margin: 0;
+            padding-bottom: 30px;
+            font-size: 1.2em;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+    </style>
+
+    <style>
+        .user-profile {
+            margin: auto;
+            margin-top: 20px;
+            width: 27em;
+            height: 11em;
+            border-radius: .3em;
+        }
+
+        .user-profile #nomeCompleto {
+            margin: auto;
+            margin-top: -6.40em;
+            margin-left: 10.80em;
+            color: black;
+            font-size: 1.53em;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: bold;
+        }
+
+        #username {
+            margin: auto;
+            display: inline-block;
+            margin-left: 16.5em;
+            color: white;
+            font-size: 1em;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .user-profile > .description {
+            margin: auto;
+            margin-left: 16.5em;
+            width: 18em;
+            color: white;
+            font-size: 1em;
+        }
+
+        .user-profile > img#avatar {
+            padding: .7em;
+            margin-left: .3em;
+            margin-top: .3em;
+            height: 12.23em;
+            width: 12.23em;
+            border-radius: 18em;
+        }
+    </style>
+
+    <div id="mensagem-tipo1" style="background: #d8c2a0;">
+        <div class="conteudo">
+            <h1 class="titulo">Outros Líderes</h1>
+            <div class="user-profile">
+            <img id="avatar" src="https://cdn.vox-cdn.com/thumbor/4j5kW-IKD6UN6WrC2NWUrP4L_8Y=/71x0:570x333/1200x800/filters:focal(71x0:570x333)/cdn.vox-cdn.com/uploads/chorus_image/image/49958765/kit-harington-sad-jon-snow-game-of-thrones.0.0.jpg" />
+                <div id="nomeCompleto">Jon Snow</div>
+                <div id="username">kingofnorth</div>
+                    <div class="description">
+                    <div>Email: <span id="email">jon@hotmail.com</span></div>
+                    <div>Campus: <span id="campus">Winterfell</span></div>
+                    </div>
+            </div>
+            <h2><div id="botaoapi" class="btn-menu animate__animated animate__fadeInUp scrollto" style="margin-top: 40px;">Próximo Líder</div></h2>
+        </div>
+    </div>
+
+    <div id="mensagem-tipo1">
+        <div class="conteudo">
+            <h1 class="titulo">Contribua</h1>
+            <p>“Honra ao Senhor com os teus bens e com as primícias de toda a tua renda; e se encherão fartamente os
+                teus celeiros, e transbordarão de vinho os teus lagares.” (Pv 3.9,10)</p>
+            <h2><a href="ofertar.html" class="btn-menu animate__animated animate__fadeInUp scrollto">OFERTAR</a></h2>
+        </div>
+    </div>
+
+    <style>
+        @media (max-width: 600px) {
+             #mensagem-tipo2 .mensagem-tipo2 {
+                background-image: url("assets/img/youtube/i1-mobile.jpg");  
+            } 
+        }
+        @media (min-width: 600px) {
+            #mensagem-tipo2 .mensagem-tipo2 {
+                background-image: url('assets/img/youtube/i1.jpg');
+            }
+        }
+    </style>
+    <!-- SESSÃO COM LINK A PÁGINA NO YOUTUBE -->
+    <section id="mensagem-tipo2">
+        <div class="mensagem-tipo2">
+            <h1 class="heading1">Veja nossos Lançamentos</h1>
+            <p><a href="https://www.youtube.com/channel/UCDtufP1y3-23xNgngb9K_CA?sub_confirmation=1"
+                    class="btn-menu animate__animated animate__fadeInUp scrollto">ASSISTIR</a></p>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <!-- FOOTER COM NOME DA EMPRESA E LINK PARA ENVIO DE EMAIL -->
+    <div class="content" style="text-align: -webkit-center;">
+        <div class="row" style="width: 90%; text-align: center;">
+            <div class="col-lg-6 col-12">
+                <a style="text-decoration: none; color: #F56469;"
+                    href="mailto:ipadpaulista@gmail.com">ipadpaulista@gmail.com</a>
+            </div>
+            <div class="col-lg-6 col-12">
+                <p>IPAD PAULISTA - PE | 2021</p>
+            </div>
+        </div>
+        <div id="verso1"></div>
+    </div>
+</footer>
+
+
+<script>
+    // FUNÇÃO JS PARA EFEITO DA ROLANGEM DO SCROLL E PARA A MUDANÇA DE COR DO NAVABAR
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                $('.navbar').addClass('solid');
+            } else {
+                $('.navbar').removeClass('solid');
+            }
+        });
+    });
+    //FUNÇÃO PARA MANIPULAR A VELOCIDADE DO SCROLL DO MOUSE
+    $(function () {
+        jQuery.scrollSpeed(100, 1500, 'easeOutCubic');
+    });
+
+
+    //CONSUMINDO API REST PARA LISTAR A SESSÃO LÍDERES DA PÁGINA
+    var btn = document.querySelector("#botaoapi");
+
+    btn.addEventListener("click", function() {
+        var url = "https://randomuser.me/api/";
+        fetch(url)
+            .then(handleErrors)
+            .then(parseJSON)
+            .then(updateProfile)
+            .catch(printError) 
+    });
+
+    function handleErrors(request) {
+        if(!request.ok) {
+            throw Error(request.status);
+        }
+        return request;
+    }
+
+    function parseJSON(res) {
+        return res.json();
+    }
+
+    function updateProfile(data) {
+        var avatar = document.getElementById("avatar");
+        var name = document.getElementById("nomeCompleto");
+        var username = document.getElementById("username");
+        var email = document.getElementById("email");
+        var city = document.getElementById("campus");
+        avatar.src = data.results[0].picture.medium;
+        name.innerHTML =  data.results[0].name.first + " " + data.results[0].name.last;
+        username.innerHTML = data.results[0].login.username;
+        email.innerHTML = data.results[0].email;
+        city.innerHTML = data.results[0].location.city;
+    }
+
+    function printError(error) {
+         alert(error);
+    }
+
+</script>
+
+</html>
